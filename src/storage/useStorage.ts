@@ -51,3 +51,24 @@ export const useStorageUpload = (path: string) => {
 
   return [{ url, error, progress, loading }, handleUpload];
 };
+
+export const useStorageDelete = (path: string) => {
+  const storageRef = firebase.storage().ref(path);
+
+  const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
+  const [loading, setLoading] = useState<boolean>();
+
+  const handleDelete = async (fileName: string) => {
+    const deleteRef = storageRef.child(fileName);
+    try {
+      setLoading(true);
+      await deleteRef.delete();
+      setLoading(false);
+    } catch (error) {
+      setError(error);
+      setLoading(false);
+    }
+  };
+
+  return { loading, error, handleDelete };
+};
