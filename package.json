@@ -1,7 +1,20 @@
 {
   "name": "fire-hooks",
   "version": "1.0.0",
-  "description": "",
+  "author": "Ephrem Demelash",
+  "license": "ISC",
+  "description": "React Hooks For Firebase",
+  "homepage": "https://github.com/ephremdeme/fire-hooks",
+  "bugs": "https://github.com/ephremdeme/fire-hooks/issues",
+  "keywords": [
+    "react",
+    "hooks",
+    "firebase"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ephremdeme/fire-hooks.git"
+  },
   "main": "build/index.js",
   "module": "build/index.es.js",
   "jsnext:main": "build/index.es.js",
@@ -10,7 +23,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "start": "rollup -c -w"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
@@ -29,7 +43,5 @@
     "firebase": ">= 8.0.0",
     "react": ">= 16.8.0"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {}
 }
