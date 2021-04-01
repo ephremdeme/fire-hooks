@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import firebase from "firebase/app";
+import { useStorageRef } from "./useStorageRef";
 
 export const useStorageUpload = (path: string) => {
-  const storageRef = firebase.storage().ref(path);
+  const storageRef = useStorageRef(path);
   const [url, seturl] = useState<string>();
   const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
   const [loading, setLoading] = useState<boolean>();
@@ -53,7 +54,7 @@ export const useStorageUpload = (path: string) => {
 };
 
 export const useStorageDelete = (path: string) => {
-  const storageRef = firebase.storage().ref(path);
+  const storageRef = useStorageRef(path);
 
   const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
   const [loading, setLoading] = useState<boolean>();
@@ -74,7 +75,7 @@ export const useStorageDelete = (path: string) => {
 };
 
 export const useStorageDirDelete = (path: string) => {
-  const storageRef = firebase.storage().ref(path);
+  const storageRef = useStorageRef(path);
   const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
   const [loading, setLoading] = useState<boolean>();
 
@@ -104,7 +105,7 @@ export const useStorageDirDelete = (path: string) => {
 };
 
 export const useDownloadUrl = (path: string) => {
-  const storageRef = firebase.storage().ref(path);
+  const storageRef = useStorageRef(path);
 
   const [url, seturl] = useState<string>();
   const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
