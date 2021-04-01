@@ -102,3 +102,24 @@ export const useStorageDirDelete = (path: string) => {
 
   return { loading, error, handleDirDelete };
 };
+
+export const useDownloadUrl = (path: string) => {
+  const storageRef = firebase.storage().ref(path);
+
+  const [url, seturl] = useState<string>();
+  const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
+  const [loading, setLoading] = useState<boolean>();
+  useEffect(() => {
+    storageRef
+      .getDownloadURL()
+      .then((value) => {
+        seturl(value);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+      });
+  }, [path]);
+
+  return { url, error, loading };
+};
