@@ -72,3 +72,33 @@ export const useStorageDelete = (path: string) => {
 
   return { loading, error, handleDelete };
 };
+
+export const useStorageDirDelete = (path: string) => {
+  const storageRef = firebase.storage().ref(path);
+  const [error, setError] = useState<firebase.storage.FirebaseStorageError>();
+  const [loading, setLoading] = useState<boolean>();
+
+  const handleDirDelete = async (dirName?: string) => {
+    const deleteRef = dirName ? storageRef.child(dirName) : storageRef;
+    try {
+      setLoading(true);
+      deleteRef
+        .listAll()
+        .then(function (result) {
+          result.items.forEach(function (file) {
+            file.delete();
+          });
+          setLoading(false);
+        })
+        .catch((err) => {
+          setError(err);
+          setLoading(false);
+        });
+    } catch (err) {
+      setError(err);
+      setLoading(false);
+    }
+  };
+
+  return { loading, error, handleDirDelete };
+};
