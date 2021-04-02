@@ -2,9 +2,9 @@
 
 A set of reusable [React Hooks](https://reactjs.org/docs/hooks-intro.html) for [Firebase](https://firebase.google.com/)
 
-[![npm version](https://img.shields.io/npm/v/fire-hooks.svg?style=flat-square)](https://www.npmjs.com/package/fire-hooks)
-[![npm downloads](https://img.shields.io/npm/dw/fire-hooks.svg?style=flat-square)](https://www.npmjs.com/package/fire-hooks)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/react?style=flat-square)](https://www.github.com/ephremdeme/fire-hooks)
+[![npm version](https://img.shields.io/npm/v/@epha123/fire-hooks?style=flat-square)](https://www.npmjs.com/package/@epha123/fire-hooks)
+[![npm downloads](https://img.shields.io/npm/dw/@epha123/fire-hooks?style=flat-square)](https://www.npmjs.com/package/@epha123/fire-hooks)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@epha123/fire-hooks?style=flat-square)](https://www.github.com/ephremdeme/fire-hooks)
 
 ## What is fire-hooks?
 
@@ -27,13 +27,13 @@ A set of reusable [React Hooks](https://reactjs.org/docs/hooks-intro.html) for [
 ## Installation
 
 ```bash
-npm install --save fire-hooks
+npm install --save @epha123/fire-hooks
 ```
 
 Or with Yarn
 
 ```bash
-yarn add fire-hooks
+yarn add @epha123/fire-hooks
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ import {
   useDocumentAdd,
   useDocumentDelete,
   useDocumentUpdate,
-} from "fire-hooks";
+} from "@epha123/fire-hooks";
 
 interface ITodo {
   id: string;
