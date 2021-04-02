@@ -1,4 +1,6 @@
 import firebase from "firebase/app";
+import "firebase/firestore";
+
 import { useEffect, useState } from "react";
 
 export const useDocument = (docRef: firebase.firestore.DocumentReference) => {
