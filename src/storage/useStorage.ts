@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import firebase from "firebase/app";
+import "firebase/storage";
 import { useStorageRef } from "./useStorageRef";
 
 export const useStorageUpload = (path: string) => {
