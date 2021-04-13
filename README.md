@@ -2,9 +2,9 @@
 
 A set of reusable [React Hooks](https://reactjs.org/docs/hooks-intro.html) for [Firebase](https://firebase.google.com/)
 
-[![npm version](https://img.shields.io/npm/v/ephrem/fire-hooks?style=flat-square)](https://www.npmjs.com/package/ephrem/fire-hooks)
-[![npm downloads](https://img.shields.io/npm/dw/ephrem/fire-hooks?style=flat-square)](https://www.npmjs.com/package/ephrem/fire-hooks)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/ephrem/fire-hooks?style=flat-square)](https://www.github.com/ephremdeme/fire-hooks)
+[![npm version](https://img.shields.io/npm/v/@ephrem/fire-hooks?style=flat-square)](https://www.npmjs.com/package/@ephrem/fire-hooks)
+[![npm downloads](https://img.shields.io/npm/dw/@ephrem/fire-hooks?style=flat-square)](https://www.npmjs.com/package/@ephrem/fire-hooks)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@ephrem/fire-hooks?style=flat-square)](https://www.github.com/ephremdeme/fire-hooks)
 
 ## What is fire-hooks?
 

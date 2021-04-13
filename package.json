@@ -1,6 +1,6 @@
 {
   "name": "@ephrem/fire-hooks",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": "Ephrem Demelash",
   "license": "ISC",
   "description": "React Hooks For Firebase",
