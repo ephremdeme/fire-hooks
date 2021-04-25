@@ -12,10 +12,10 @@ export const useCollectionData = <T>(
   const [error, setError] = useState<firebase.firestore.FirestoreError>();
 
   useEffect(() => {
+    setLoading(true);
     const unsub = query.onSnapshot(
       (snapshots) => {
         let allData: T[] = [];
-        setLoading(true);
         snapshots.forEach((doc) => {
           if (transform) {
             let resp = transform(doc);
@@ -49,11 +49,10 @@ export const useCollectionDataOnce = <T>(
   const [error, setError] = useState<firebase.firestore.FirestoreError>();
 
   useEffect(() => {
+    setLoading(true);
     query.get().then(
       (snapshot) => {
         let allData: T[] = [];
-        setLoading(true);
-
         snapshot.forEach((doc) => {
           if (transform) {
             let resp = transform(doc);
